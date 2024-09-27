@@ -1,0 +1,13 @@
+<p-menubar>
+    <ng-template pTemplate="start">
+        <div class="flex align-items-center gap-2">
+            <p-avatar [image]="'assets/'+currentUser?.rol+'.png'" shape="circle" />
+            <span class="user-label">{{ currentUser?.username | uppercase }}</span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex align-items-center gap-2">
+            <generic-button [label]="'Salir'" [action]="'logout'" [style]="{borderRadius: '5px',padding: '6px 15px',cursor: 'pointer'}" (buttonEvent)="onButtonEvent($event)"/>
+        </div>
+    </ng-template>
+</p-menubar>

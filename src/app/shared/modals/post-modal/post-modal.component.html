@@ -1,0 +1,50 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form__title">{{ modalTitle }}</div>
+    <div class="form__inputs">
+        <div class="d-flex flex-column">
+            <input 
+                placeholder="título" 
+                class="form__inputs--input" 
+                type="text" 
+                formControlName="title" 
+                autocomplete="off"
+                autofocus="off"
+                [style]="{
+                    border: formControls['title'].errors && formControls['title'].touched && '1px solid #a11a1a'
+                }"/>
+
+            @if( formControls['title'].touched && formControls['title'].hasError('required') ){
+                <form-errors-message message="El título es requerido"/>
+            }
+        </div>
+        <div class="d-flex flex-column">
+            <textarea 
+                placeholder="descripción" 
+                formControlName="body"
+                autofocus="off"
+                class="form__inputs--input" 
+                rows="10" 
+                cols="50"
+                autocomplete="off"
+                [style]="{
+                    border: formControls['body'].errors && formControls['body'].touched && '1px solid #a11a1a'
+                }"
+            >
+                Write something here
+            </textarea>
+            @if( formControls['body'].touched && formControls['body'].hasError('required') ){
+                <form-errors-message message="La descripción es requerida"/>
+            }
+        </div>
+        <button 
+            class="form__inputs--sigin-btn" 
+            [pTooltip]="form.invalid ? '' : btnSubmitTitle" 
+            tooltipPosition="bottom"
+            [style]="{
+                opacity: form.invalid ? '0.4' : '1'
+            }" 
+            [disabled]="form.invalid"
+            >{{ btnSubmitTitle }}
+        </button>
+    </div>
+</form>

@@ -1,0 +1,121 @@
+@import '../../../../styles.scss';
+
+.login {
+    .login__wrapper {
+        width: 100%;
+        min-height: 100vh;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url('../../../../assets/login.jpg');
+
+
+
+        .form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0.75rem;
+            background-color: $light;
+            color: rgb(97 97 97);
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+            width: 22rem;
+            background-clip: border-box;
+
+            .form__title {
+                position: relative;
+                background-image: linear-gradient(to top right, $light-blue, $blue-gradient-to);
+                margin: 10px;
+                border-radius: 0.75rem;
+                overflow: hidden;
+                color: $light;
+                box-shadow: 0 0 $black, 0 0 $black, 0 0 $black, 0 0 $black, rgba(33, 150, 243, .4);
+                height: 7rem;
+                letter-spacing: 0;
+                line-height: 1.375;
+                font-weight: 600;
+                font-size: 1.9rem;
+                font-family: Roboto, sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .form__inputs {
+                padding: 1.5rem;
+                gap: 1rem;
+                display: flex;
+                flex-direction: column;
+
+                .form__inputs--input {
+                    border: 1px solid rgba(128, 128, 128, 0.61);
+                    outline: 0;
+                    color: rgb(69 90 100);
+                    font-weight: 400;
+                    font-size: .9rem;
+                    line-height: 1.25rem;
+                    padding: 0.75rem;
+                    background-color: transparent;
+                    border-radius: .375rem;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .form__inputs--input:focus {
+                    border: 1px solid $light-blue;
+                }
+
+                .form__inputs--signin-btn {
+                    font-weight: 700;
+                    font-size: .75rem;
+                    line-height: 1rem;
+                    text-align: center;
+                    padding: .75rem 1.5rem;
+                    background-color: $light-blue;
+                    background-image: linear-gradient(to top right, $light-blue, $blue-gradient-to);
+                    border-radius: .5rem;
+                    width: 100%;
+                    outline: 0;
+                    border: 0;
+                    color: $light;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+@media (max-width: 576px) {
+    .login {
+        .login__wrapper {
+            .form {
+                width: 100%;
+
+                .form__title {
+                    font-size: 1.3rem;
+                }
+
+            }
+
+
+        }
+    }
+}
+
+// .wrap-login100 {
+//     width: 500px;
+//     background: $light;
+//     border-radius: 10px;
+//     overflow: hidden;
+// }

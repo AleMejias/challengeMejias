@@ -1,0 +1,15 @@
+<section class="notifications-wrapper">
+    <div class="notifications-container">
+        <div class="error-alert">
+            <div class="flex">
+                <div class="error-prompt-container">
+                    <p class="error-prompt-heading">Necesitas un token de autorización para operar dentro de la aplicación
+                    </p>
+                    <div class="error-prompt-wrap">
+                        <generic-button [label]="'Ir al login'" [action]="'navigate'" [style]="{padding: '5px 10px',borderRadius: '3px',cursor: 'pointer'}" (buttonEvent)="onClick($event)"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

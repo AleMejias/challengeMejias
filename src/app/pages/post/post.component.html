@@ -1,0 +1,38 @@
+<p-toast position="top-center"></p-toast>
+
+<section>
+    <header-menu-bar />
+
+    <div class="row m-0">
+        <div class="col p-0">
+            <h2 class="px-3 py-2">Posts</h2>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col p-0">
+            <div class="container py-2 mt-2">
+        
+                @if( loadingLayout$ | async ) {
+                    <spinner />
+                }@else {
+                    <generictable  
+                        [data]="genericTableData" 
+                        [cols]="cols" 
+                        [paginator]="true" 
+                        [totalRecords]="posts.length" 
+                        (searchEvent)="onFilter($event)"
+                        (addNewEvent)="onAddNewPost()" 
+                        (editRowEvent)="onEditPost($event)" 
+                        (deleteRowEvent)="onDeletePost($event)" 
+                        (paginationEvent)="onPagination($event)"
+                    />
+                }
+
+        
+            </div>
+        </div>
+
+    </div>
+
+
+</section>

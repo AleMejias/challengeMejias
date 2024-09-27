@@ -1,10 +1,21 @@
-# ChallengeMejias
+# Challenge - Alejandro Mejias
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+A continuación paso a detallar herramientas y ajustes necesarios para la aplicación.
 
-## Development server
+1) Angular: Version 18
+2) Node: v18.20.4 o superior
+3) Npm: 10.7.0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Credenciales
+
+#### User: ( tendrá el rol user por defecto )
+
+username: user | password: user
+
+#### Admin: ( tendrá el rol admin por defecto )
+username: auditor | password: auditor
+
 
 ## Code scaffolding
 

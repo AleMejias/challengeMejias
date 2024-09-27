@@ -1,0 +1,1 @@
+export type GenericButtonActions = 'logout' | 'clear' | 'add' | 'navigate';
